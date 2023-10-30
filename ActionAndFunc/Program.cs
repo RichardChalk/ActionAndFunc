@@ -17,7 +17,7 @@ namespace ActionAndFunc
             Action myActionDelegateNoArgs = MethodThatRequiresNoArgs;
             myActionDelegateNoArgs();
 
-            // En Action delegate MED parmetrar!
+            // En Action delegate MED parametrar!
             Action<int, int> myActionDelegate = MethodThatRequiresTwoInts;
             myActionDelegate(3, 4);
 
@@ -32,16 +32,22 @@ namespace ActionAndFunc
             int a = 5;
             int b = 7;
             float result = mathOperation(a, b);
+            Console.WriteLine("En Func delegate som har 2 in parametrar av typen int");
+            Console.WriteLine("... och en returtyp av float");
+            Console.WriteLine(result);
         }
 
         private static void MethodThatRequiresNoArgs()
         {
-            Console.WriteLine("Nothig to see here!");
+            Console.WriteLine("En Action delegate UTAN parmetrar!");
+            Console.WriteLine("Nothig to see here!\n");
         }
 
         private static void MethodThatRequiresTwoInts(int arg1, int arg2)
         {
-            Console.WriteLine(arg1+arg2);
+            Console.WriteLine("En Action delegate MED parametrar!");
+            Console.WriteLine(arg1 + arg2);
+            Console.WriteLine();
         }
 
         private static float Add(int num1, int num2)
